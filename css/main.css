@@ -1,0 +1,38 @@
+@font-face {
+    font-family: IRANSans;
+    src: url("../fonts/IRANSansWeb\(FaNum\).ttf"),
+    url("../fonts/IRANSansWeb\(FaNum\).eot") 
+}
+.rtl{
+    direction: rtl;
+}
+.dropdown-menu{
+    left: unset;
+    right: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    background-color: #1f193b;
+}
+.dropdown-menu a{
+    color:#fff;
+    text-align: right;
+}
+.dropdown-menu.show {
+    max-height: 300px;
+    opacity: 1;
+}
+.dropdown-toggle::after{
+    margin-right: 0.255em;
+    vertical-align: 0.125em;
+}
+.breadcrumb-item + .breadcrumb-item::before{
+    float: right;
+padding-left: .5rem;
+}

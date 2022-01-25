@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='./css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='./css/select2.min.css'>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel='stylesheet' type='text/css' href='./css/dashboard.css'>
+
+</head>
+<body>
+    <div class="container-fluid p-0 m-0">
+        <main>
+            <aside class="sideBar">
+                <div class="sideLogo">
+                    <img src="./img/sidenav/logo.webp" alt="logo">
+                </div>
+                <div class="routeLinks position-relative">
+                    <ul>
+                        <li class="nav-link activeRoute">
+                            <a href="#"><i class="fad fa-home"></i>داشبورد</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#"><i class="fad fa-shield"></i>فایروال</a>
+
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="dashboard position-relative">
+                <nav class="navbar position-absolute w-100 navbar-expand-md navbar-light">
+                    <div class="my-2 userAccess rtl">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">علی بخشنده</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">پروفایل کاربری</a>
+                            <a class="dropdown-item text-danger" href="#">خروج</a>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler d-lg-none customNavbarToggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fad fa-arrow-circle-up"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0 rtl pr-0 text-right">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                    <a class="dropdown-item" href="#">Action 1</a>
+                                    <a class="dropdown-item" href="#">Action 2</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div id="btnAsideResponive">
+                    <i class="fad fa-arrow-left"></i>
+                </div>
+                <div class="layout_Content">
+                    <div class="dashboardContent">
+                          <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb rtl">
+                              <li class="breadcrumb-item"><a href="#">داشبود</a></li>
+                              <li class="breadcrumb-item"><a href="#">دیگر صفحات</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">دیگر صفحات</li>
+                            </ol>
+                          </nav>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="dashboardBox">
+                                    <div class="dashboardTitleBox">
+                                        <h6>تعداد</h6>
+                                    </div>
+                                    <div class="boxChartDashboard">
+                                        <canvas id="resultAllFirewall" width="400" height="400"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dashboardBox">
+                                    <div class="dashboardTitleBox">
+                                        <h6>تعداد</h6>
+                                    </div>
+                                    <div class="boxChartDashboard">
+                                    <canvas id="resultUptime" width="400" height="400"></canvas>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="dashboardBox">
+                                    <div class="dashboardTitleBox">
+                                        <h6>تعداد</h6>
+                                    </div>
+                                    <div class="boxChartDashboard">
+                                    <canvas id="resultAllsystem" width="400" height="400"></canvas>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none;" class="overlayDashboard"></div>
+            </div>
+            
+        </main>
+    </div>
+    <script src='./js/jquery-3.6.0.min.js'></script>
+    <script src='./js/bootstrap.min.js'></script>
+    <script src='./js/select2.min.js'></script>
+    <script src='./js/all.min.js'></script>
+    <script src='./js/chart.min.js'></script>
+    <script src='./js/chartGenerator.js'></script>
+    <script src='./js/main.js'></script>
+</body>
+</html>
