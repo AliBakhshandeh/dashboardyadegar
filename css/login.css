@@ -52,3 +52,21 @@ body,html{
     height: 45px;
     border-radius: 50px;
 }
+@media only screen and (max-width: 768px){
+    .loginForm{
+        width: 100%;
+        flex-flow: column;
+        flex-direction: column-reverse;
+    }
+    /* .loginForm div.right{
+        display: none;
+    } */
+    .inputBox input{
+        width: 100%;
+    }
+    .loginForm div.left{
+        padding-left: unset;
+        border-left: unset;
+        width: 100%;
+    }
+}
