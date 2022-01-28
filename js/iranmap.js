@@ -6,7 +6,7 @@
  * Email: mohammadrpm@gmail.com
  * Web: http://mrpm.ir
  */ 
-var dataOnmap = [
+var dataOnMap = [
     {city : "iran", active: 1, deactive: 2},
     {city : "alborz", active: 1, deactive: 2},
     {city : "ardabil", active: 1, deactive: 2},
@@ -79,8 +79,8 @@ $(function(){
           try {
             let get = items[element].classList.item(items[element].classList.length-1)
 
-            console.log(dataOnmap.find(item => {
-                items[element].setAttribute("title", `<span>فعال : ${item.active ? item.active : "اطلاعات موجود نیست"}</span><br/><span>غیر فعال : ${item.deactive ? item.deactive : "اطلاعات موجود نیست"}</span>`)
+            console.log(dataOnMap.find(item => {
+                items[element].setAttribute("title", `<span>${item.city}</span><br/><span>فعال : ${item.active ? item.active : "اطلاعات موجود نیست"}</span><br/><span>غیر فعال : ${item.deactive ? item.deactive : "اطلاعات موجود نیست"}</span>`)
                 return item.city == get
             }))
           } catch (e) {
