@@ -1,80 +1,229 @@
-/*
- * Iran Map - SVG and Responsive.
- * Free and open source.
- * Version 1.1.0
- * By: MohammadReza Pourmohammad.
- * Email: mohammadrpm@gmail.com
- * Web: http://mrpm.ir
- */ 
+var get = [
+    "Yazd",
+    "Tehran",
+    "Markazi",
+    "Isfahan",
+    "Qom",
+    "Golestan",
+    "KhorasanNorth",
+    "Alborz",
+    "Zanjan",
+    "Qazvin",
+    "Lorestan",
+    "Fars",
+    "Kerman",
+    "KhorasanSouth",
+    "Khuzestan",
+    "KohgiluyehAndBoyerAhmad",
+    "KhorasanRazavi",
+    "ChaharMahaalBakhtiari",
+    "Hamedan",
+    "Kurdistan",
+    "Mazandaran",
+    "Semnan",
+    "Bushehr",
+    "Gilan",
+    "Hormozgan",
+    "SistanAndBaluchestan",
+    "AzerbaijanEast",
+    "AzerbaijanWest",
+    "Ardabil",
+    "Kermanshah",
+    "Ilam",
+    "Urumia"
+  ]
 var dataOnMap = [
-    {city : "iran", active: 1, deactive: 2},
-    {city : "alborz", active: 1, deactive: 2},
-    {city : "ardabil", active: 1, deactive: 2},
-    {city : "azerbaijan-east", active: 1, deactive: 2},
-    {city :  "azerbaijan-west", active: 1, deactive: 2},
-    {city : "chahar-mahaal-bakhtiari", active: 1, deactive: 2},
-    {city : "gilan", active: 1, deactive: 2},
-    {city : "golestan", active: 1, deactive: 2},
-    {city : "hamadan", active: 1, deactive: 2},
-    {city : "hormozgan", active: 1, deactive: 2},
-    {city : "ilam", active: 1, deactive: 2},
-    {city : "isfahan", active: 1, deactive: 2},
-    {city : "kerman", active: 1, deactive: 2},
-    {city : "kermanshah", active: 1, deactive: 2},
-    {city : "khorasan-north", active: 1, deactive: 2},
-    {city : "khorasan-razavi", active: 1, deactive: 2},
-    {city : "khorasan-south", active: 1, deactive: 2},
-    {city : "khuzestan", active: 1, deactive: 2},
-    {city : "kohgiluyeh-boyer-ahmad", active: 1, deactive: 2},
-    {city : "kurdistan", active: 1, deactive: 2},
-    {city : "lorestan", active: 1, deactive: 2},
-    {city : "markazi", active: 1, deactive: 2},
-    {city : "mazandaran", active: 1, deactive: 2},
-    {city : "qazvin", active: 1, deactive: 2},
-    {city : "qom", active: 1, deactive: 2},
-    {city : "semnan", active: 1, deactive: 2},
-    {city : "sistan-baluchestan", active: 1, deactive: 2},
-    {city : "tehran", active: 10, deactive: 2},
-    {city : "yazd", active: 1, deactive: 2},
-    {city : "zanjan", active: 1, deactive: 2},
-    {city : "caspian", active: 1, deactive: 2},
-    {city : "persian-gulf", active: 1, deactive: 2},
-    {city : "jazmourian", active: 1, deactive: 2},
-    {city : "urmia", active: 1, deactive: 2},
-    {city : "abu-musa", active: 1, deactive: 2},
-    {city : "faror-big", active: 1, deactive: 2},
-    {city : "faror-small", active: 1, deactive: 2},
-    {city : "hendorabi", active: 1, deactive: 2},
-    {city : "hengam", active: 1, deactive: 2},
-    {city : "hormoz", active: 1, deactive: 2},
-    {city : "khark", active: 1, deactive: 2},
-    {city : "kish", active: 1, deactive: 2},
-    {city : "lark", active: 1, deactive: 2},
-    {city : "lavan", active: 1, deactive: 2},
-    {city : "qeshm", active: 1, deactive: 2},
-    {city : "siri", active: 1, deactive: 2},
-    {city : "tunb-big", active: 1, deactive: 2},
-    {city : "tunb-small", active: 1, deactive: 2},
-]
-$(function() {
+    {
+      "city": "Yazd",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Tehran",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Markazi",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Isfahan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Qom",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Golestan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "KhorasanNorth",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Alborz",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Zanjan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Qazvin",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Lorestan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Fars",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Kerman",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "KhorasanSouth",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Khuzestan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "KohgiluyehAndBoyerAhmad",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "KhorasanRazavi",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "ChaharMahaalBakhtiari",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Hamedan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Kurdistan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Mazandaran",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Semnan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Bushehr",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Gilan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Hormozgan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "SistanAndBaluchestan",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "AzerbaijanEast",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "AzerbaijanWest",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Ardabil",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Kermanshah",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Ilam",
+      "active": 2,
+      "deactive": 3
+    },
+    {
+      "city": "Urumia",
+      "active": 2,
+      "deactive": 3
+    }
+  ]
+//   function for get city on map path class -
+// $(function(){
+//     get.forEach(item => {
+//         dataOnMap.push({city: item , active: 2 , deactive: 3})
+//     })
+//     console.log(dataOnMap)
+// })
 
+$(function() {
     $(window).resize(function() {
         resposive();
     });
-    var list = []
-$(function(){
+// set Attribute Tooltip for Map -
+    $(function(){
     var items = $('#IranMap svg g path')
-    Object.keys(items).map(function(element) {
-        try{
-            items[element].setAttribute("data-toggle", "tooltip")
-            items[element].setAttribute("data-placement", "top")
-            items[element].setAttribute("data-html", "true")
-           
+    var all = $(".mapItem").map(function() {
+        console.log(get.push(this.classList.item(this.classList.length-1)))
+        console.log(get);
+        dataOnMap.find(item => {
+            if(this.classList.item(this.classList.length-1) == item.city)
+            this.setAttribute("title", `<span>${item.city}</span><br/><span>فعال : ${item.active ? item.active : "اطلاعات موجود نیست"}</span><br/><span>غیر فعال : ${item.deactive ? item.deactive : "اطلاعات موجود نیست"}</span>`)
+        })
+        this.classList.item(this.classList.length-1)
+        this.setAttribute("data-toggle", "tooltip")
+        this.setAttribute("data-placement", "top")
+        this.setAttribute("data-html", "true")
+    }).get();
     
-        }catch(e){
-            // comment
-        }
-      });
+    console.log(all.join());
+
       Object.keys(items).map(function(element){
           try {
             let get = items[element].classList.item(items[element].classList.length-1)
@@ -84,8 +233,7 @@ $(function(){
                 return item.city == get
             }))
           } catch (e) {
-            // comment
-
+        // comment for Dont show Error Classlist Item
           }
         
 
