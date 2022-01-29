@@ -16,7 +16,10 @@
     <div class="container-fluid p-0 m-0">
         <main>
             <aside class="sideBar">
-                <div id="digital_clock" class="glow">00:00:00</div>
+                <div class="boxTime">
+                    <div id="digital_clock" class="glow">00:00:00</div>
+                    <div class="text-center rtl" id="date">00/00/00</div>    
+                </div>
                 <div class="sideLogo">
                     <img src="./img/sidenav/logo.webp" alt="logo">
                 </div>
@@ -40,10 +43,10 @@
                     <div class="dashboardContent container-fluid m-0 p-0">
                         <nav class="navbar w-100 navbar-expand-md navbar-light">
                             <div class="my-2 userAccess rtl">
-                                <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">علی بخشنده</a>
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fad fa-user ml-2"></i><span>نام کاربر</span></a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                    <a class="dropdown-item" href="#">پروفایل کاربری</a>
-                                    <a class="dropdown-item text-danger" href="#">خروج</a>
+                                    <a class="dropdown-item" href="#"><i class="fad fa-user-cog ml-2"></i>پروفایل کاربری</a>
+                                    <a class="dropdown-item text-danger" href="#"><i class="fad fa-sign-out ml-2"></i>خروج</a>
                                 </div>
                             </div>
                             <button class="navbar-toggler d-lg-none customNavbarToggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -474,6 +477,7 @@
     <script src='./js/chartGenerator.js'></script>
     <script src='./js/iranmap.min.js'></script>
     <script src='./js/iranmap.js'></script>
+    <script src='./js/pdate.min.js'></script>
     <script src='./js/main.js'></script>
     <script>
         

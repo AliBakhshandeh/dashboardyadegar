@@ -13,7 +13,8 @@ document.getElementById('btnAsideResponive').addEventListener('click', () => {
     } 
 })
 
-// Clock NavBar -
+// Date & Clock NavBar -
+AMIB.showPDate( 'date' );
 setInterval(showTime, 1000);
 
 function showTime(){
