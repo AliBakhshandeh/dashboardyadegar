@@ -23,3 +23,21 @@
     </div>
   </div>
 </div>
+
+
+
+// select2
+
+// for multi select
+<select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+  <option value="AL">Alabama</option>
+    ...
+  <option value="WY">Wyoming</option>
+</select>
+
+//select with search box
+<select class="js-example-basic-single" name="state">
+  <option value="AL">Alabama</option>
+    ...
+  <option value="WY">Wyoming</option>
+</select>
