@@ -9,7 +9,6 @@ It is built with **HTML, CSS, Bootstrap, JavaScript, and jQuery**.
 
 - Login page (`login.html`)  
 - Main dashboard (`index.html`)  
-- Result / output pages (`result/`)  
 - Responsive design with **Bootstrap**  
 - Lightweight and easy to deploy  
 
@@ -25,8 +24,7 @@ dashboardyadegar/
 ├── img/        # Images
 ├── fonts/      # Fonts
 ├── index.html  # Main dashboard
-├── login.html  # Login page
-└── result/     # Result / output pages
+└── login.html  # Login page
 ```
 
 ---
